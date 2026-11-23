@@ -4,8 +4,8 @@ import { Head } from "@inertiajs/vue3";
 import { useMediaQuery } from "@vueuse/core";
 import { computed } from "vue";
 
-const artworks = Array.from({ length: 16 }, (_, index) => index + 1)
-  .filter((number) => number !== 5)
+const artworks = Array.from({ length: 17 }, (_, index) => index + 1)
+  .filter((number) => number !== 5 && number !== 13)
   .map((number) => {
 
   return {
@@ -69,7 +69,7 @@ const rotatingIndices = computed(() => {
             class="block h-full w-full object-contain object-center"
             :class="{ 'artwork-spin': rotatingIndices.has(index) }"
             :style="rotatingIndices.has(index) ? {
-              animationDuration: `${70 + (Math.floor(index / columns) % 3) * 10}s`,
+              animationDuration: `${20 + (Math.floor(index / columns) % 3) * 5}s`,
               animationDirection: Math.floor(index / columns) % 2 ? 'reverse' : 'normal',
             } : undefined"
           />
@@ -82,7 +82,7 @@ const rotatingIndices = computed(() => {
 
 <style scoped>
 .artwork-spin {
-  animation: artwork-rotation 70s linear infinite;
+  animation: artwork-rotation 20s linear infinite;
 }
 
 @keyframes artwork-rotation {
