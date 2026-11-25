@@ -4,7 +4,7 @@ import { Link } from "@inertiajs/vue3";
 
 <template>
   <header
-      class="fixed inset-x-0 top-0 z-50 flex items-center justify-between flex-wrap gap-5 bg-white/95 px-6 py-7 sm:px-10 lg:px-16"
+      class="fixed inset-x-0 top-0 z-50 flex items-center justify-between flex-wrap gap-5 bg-white/95 px-6 py-5 sm:px-10 lg:px-16"
     >
       <Link
         href="/"
